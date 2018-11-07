@@ -1,0 +1,9 @@
+<div class="board">
+    <input class="start-btn" type="button" ng-click="$ctrl.onStartClick()" value="Start Game"/>
+    <p ng-hide="$ctrl.running">Game has not yet started</p>
+    <p ng-show="$ctrl.running && !$ctrl.finishedGame">Current Player is: <span>{{$ctrl.currentPlayer}}</span></p>
+    <p ng-show="$ctrl.finishedGame">Winner is: <span>{{$ctrl.currentPlayer}}</span></p>
+    <div class="board-row" ng-repeat="i in $ctrl.indexes">
+        <square ng-repeat="j in $ctrl.indexes" on-click="$ctrl.onClick(j,i)" winner-cell="$ctrl.winnerCell[i*3+j]" mark="$ctrl.board[i*3+j]" ></square>
+    </div>
+</div>
