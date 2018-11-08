@@ -1,4 +1,4 @@
-body,h1  {
+body,h1,h2 {
     display: flex;
     justify-content: center;
     -webkit-font-smoothing: antialiased;
@@ -7,6 +7,30 @@ body,h1  {
     font-family: 'Helvetica', Courier, sans-serif;
 }
 
+
+.menu {
+    display: flex;
+    justify-content: center;
+    width:240px;
+    margin-bottom:30px;
+}
+
+.active { 
+    color: rgb(61, 120, 180); 
+    font-weight: bolder; 
+    text-decoration: none;
+}
+a {
+    text-decoration: none;
+    color:rgb(94, 156, 221);
+}
+a.underlined {
+    text-decoration: underline;
+}
+.menu a {
+    margin-left:auto;
+    margin-right:auto;
+}
 .title {
     font-size:48px;
     font-weight:100;
